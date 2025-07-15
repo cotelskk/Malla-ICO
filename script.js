@@ -72,6 +72,7 @@ const malla = {
 };
 
 let aprobados = [];
+let elementos = {};
 
 function crearMalla() {
   const contenedor = document.getElementById("malla");
@@ -89,10 +90,13 @@ function crearMalla() {
       div.textContent = ramo.nombre;
       div.onclick = () => manejarClick(ramo, div);
       columna.appendChild(div);
+      elementos[ramo.nombre] = { div, ramo };
     });
 
     contenedor.appendChild(columna);
   }
+
+  actualizarColoresDisponibles();
 }
 
 function manejarClick(ramo, div) {
@@ -102,21 +106,32 @@ function manejarClick(ramo, div) {
     div.classList.remove("tachado");
     aprobados = aprobados.filter(r => r !== ramo.nombre);
     info.textContent = `❌ Quitaste "${ramo.nombre}" de tu lista.`;
-    info.style.display = "block";
-    return;
+  } else {
+    const cumple = ramo.prerequisitos.every(req => aprobados.includes(req));
+    if (!cumple && ramo.prerequisitos.length > 0) {
+      info.textContent = `⚠️ No puedes cursar "${ramo.nombre}" aún. Prerrequisitos: ${ramo.prerequisitos.join(", ")}`;
+      info.style.display = "block";
+      return;
+    }
+
+    div.classList.add("tachado");
+    aprobados.push(ramo.nombre);
+    info.textContent = `✅ "${ramo.nombre}" marcado como aprobado.`;
   }
 
-  const cumple = ramo.prerequisitos.every(req => aprobados.includes(req));
-  if (!cumple && ramo.prerequisitos.length > 0) {
-    info.textContent = `⚠️ No puedes cursar "${ramo.nombre}" aún. Prerrequisitos: ${ramo.prerequisitos.join(", ")}`;
-    info.style.display = "block";
-    return;
-  }
-
-  div.classList.add("tachado");
-  aprobados.push(ramo.nombre);
-  info.textContent = `✅ "${ramo.nombre}" marcado como aprobado.`;
   info.style.display = "block";
+  actualizarColoresDisponibles();
+}
+
+function actualizarColoresDisponibles() {
+  for (const key in elementos) {
+    const { div, ramo } = elementos[key];
+
+    if (!div.classList.contains("tachado")) {
+      const puedeTomar = ramo.prerequisitos.length > 0 && ramo.prerequisitos.every(req => aprobados.includes(req));
+      div.style.backgroundColor = puedeTomar ? "#e0bbf9" : "#ffd6e7";
+    }
+  }
 }
 
 crearMalla();
