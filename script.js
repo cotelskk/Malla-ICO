@@ -1,100 +1,75 @@
 const malla = {
   "Semestre I": [
-    { nombre: "Matemática I", prerrequisitos: "", color: "azul" },
-    { nombre: "Programación", prerrequisitos: "", color: "verde" },
-    { nombre: "Fundamentos de adm y neg I", prerrequisitos: "", color: "rosado" },
-    { nombre: "Taller de comunicación I", prerrequisitos: "", color: "rosado" },
-    { nombre: "Inglés I", prerrequisitos: "", color: "azul" }
+    { nombre: "Matemática I", prerequisitos: [] },
+    { nombre: "Programación", prerequisitos: [] },
+    { nombre: "Fundamentos de adm y neg I", prerequisitos: [] },
+    { nombre: "Taller de comunicación I", prerequisitos: [] },
+    { nombre: "Inglés I", prerequisitos: [] }
   ],
   "Semestre II": [
-    { nombre: "Matemática II", prerrequisitos: "Matemática I", color: "azul" },
-    { nombre: "Microeconomía I", prerrequisitos: "", color: "verde" },
-    { nombre: "Contabilidad I", prerrequisitos: "", color: "verde" },
-    { nombre: "Fundamentos de adm y neg II", prerrequisitos: "Fundamentos de adm y neg I", color: "rosado" },
-    { nombre: "Inglés II", prerrequisitos: "Inglés I", color: "azul" }
+    { nombre: "Matemática II", prerequisitos: ["Matemática I"] },
+    { nombre: "Microeconomía I", prerequisitos: [] },
+    { nombre: "Contabilidad I", prerequisitos: [] },
+    { nombre: "Fundamentos de adm y neg II", prerequisitos: ["Fundamentos de adm y neg I"] },
+    { nombre: "Inglés II", prerequisitos: ["Inglés I"] }
   ],
   "Semestre III": [
-    { nombre: "Matemática III", prerrequisitos: "Matemática II", color: "azul" },
-    { nombre: "Estadística I", prerrequisitos: "Programación, Matemática II", color: "verde" },
-    { nombre: "Macroeconomía I", prerrequisitos: "Matemática I, Microeconomía I", color: "verde" },
-    { nombre: "Tecnología y empresa", prerrequisitos: "Programación", color: "rosado" },
-    { nombre: "Taller de comunicación II", prerrequisitos: "Taller de comunicación I", color: "rosado" },
-    { nombre: "Inglés III", prerrequisitos: "Inglés II", color: "azul" }
-  ],
-  "Semestre IV": [
-    { nombre: "Estadística II", prerrequisitos: "Estadística I", color: "verde" },
-    { nombre: "Microeconomía II", prerrequisitos: "Matemática II, Microeconomía I", color: "verde" },
-    { nombre: "Contabilidad II", prerrequisitos: "Contabilidad I, Tecnología y empresa", color: "verde" },
-    { nombre: "Personas y equipos", prerrequisitos: "Fundamentos de adm y neg II", color: "rosado" },
-    { nombre: "Taller de lid y trabajo en equi", prerrequisitos: "Fundamentos de adm y neg II, Taller de comunicación II", color: "rosado" },
-    { nombre: "Inglés IV", prerrequisitos: "Inglés III", color: "azul" }
-  ],
-  "Semestre V": [
-    { nombre: "Econometría I", prerrequisitos: "Matemática III, Estadística II", color: "azul" },
-    { nombre: "Macroeconomía II", prerrequisitos: "Matemática III, Macroeconomía I", color: "verde" },
-    { nombre: "Finanzas I", prerrequisitos: "Contabilidad II, Estadística II", color: "verde" },
-    { nombre: "Estrategia", prerrequisitos: "Personas y equipos, Tecnología y empresa", color: "rosado" },
-    { nombre: "Taller de ética en la toma de decisiones", prerrequisitos: "Personas y equipos, Taller de lid y trabajo en equi", color: "rosado" },
-    { nombre: "Inglés V", prerrequisitos: "Inglés IV", color: "azul" }
-  ],
-  "Semestre VI": [
-    { nombre: "Ciencia de datos", prerrequisitos: "Econometría I, Tecnología y empresa", color: "azul" },
-    { nombre: "Globalización y sustentabilidad", prerrequisitos: "Estadística II, Macroeconomía II, Estrategia", color: "rosado" },
-    { nombre: "Marketing", prerrequisitos: "Estadística II, Estrategia", color: "rosado" },
-    { nombre: "Gestión de operaciones", prerrequisitos: "Estadística II, Estrategia", color: "rosado" },
-    { nombre: "CFG I", prerrequisitos: "", color: "verde" }
-  ],
-  "Semestre VII": [
-    { nombre: "Matemáticas para economía", prerrequisitos: "Ciencia de datos", color: "azul" },
-    { nombre: "Econometría II", prerrequisitos: "Ciencia de datos", color: "azul" },
-    { nombre: "Teoría de juego", prerrequisitos: "Microeconomía II, Globalización y sustentabilidad", color: "verde" },
-    { nombre: "Crecimiento y desarrollo económico", prerrequisitos: "Macroeconomía II", color: "verde" },
-    { nombre: "CFG II", prerrequisitos: "", color: "verde" }
-  ],
-  "Semestre VIII": [
-    { nombre: "Ciencia de datos para economía", prerrequisitos: "Econometría II", color: "azul" },
-    { nombre: "Economía de la información y competencia imperfecta", prerrequisitos: "Teoría de juego", color: "verde" },
-    { nombre: "Política económica", prerrequisitos: "Crecimiento y desarrollo económico", color: "verde" },
-    { nombre: "Taller de simulación económica", prerrequisitos: "Matemáticas para economía, Macroeconomía II", color: "rosado" },
-    { nombre: "CFG III", prerrequisitos: "", color: "verde" }
-  ],
-  "Semestre IX": [
-    { nombre: "ICO09OPT_EC1", prerrequisitos: "", color: "verde" },
-    { nombre: "ICO09OPT_EC2", prerrequisitos: "", color: "verde" },
-    { nombre: "ICO09OPT_EC3", prerrequisitos: "", color: "verde" },
-    { nombre: "ICO09OPT_EC4", prerrequisitos: "", color: "verde" },
-    { nombre: "CFG IV", prerrequisitos: "", color: "verde" }
-  ],
-  "Semestre X": [
-    { nombre: "Práctica profesional mención economía", prerrequisitos: "", color: "rosado" },
-    { nombre: "Desarrollo de carrera y E-portafolio", prerrequisitos: "", color: "rosado" }
+    { nombre: "Matemática III", prerequisitos: ["Matemática II"] },
+    { nombre: "Estadística I", prerequisitos: ["Programación", "Matemática II"] },
+    { nombre: "Macroeconomía I", prerequisitos: ["Matemática I", "Microeconomía I"] },
+    { nombre: "Tecnología y empresa", prerequisitos: ["Programación"] },
+    { nombre: "Taller de comunicación II", prerequisitos: ["Taller de comunicación I"] },
+    { nombre: "Inglés III", prerequisitos: ["Inglés II"] }
   ]
+  // Puedes continuar agregando más semestres aquí si quieres
 };
 
-const contenedor = document.getElementById('malla');
-const infoBox = document.getElementById('info');
+let aprobados = [];
 
-for (let semestre in malla) {
-  let divSem = document.createElement('div');
-  divSem.className = 'semestre';
-  divSem.innerHTML = `<h2>${semestre}</h2>`;
+function crearMalla() {
+  const contenedor = document.getElementById("malla");
+  for (const semestre in malla) {
+    const columna = document.createElement("div");
+    columna.className = "semestre";
 
-  let divRamos = document.createElement('div');
-  divRamos.className = 'ramos';
+    const titulo = document.createElement("h2");
+    titulo.textContent = semestre;
+    columna.appendChild(titulo);
 
-  malla[semestre].forEach(ramo => {
-    let div = document.createElement('div');
-    div.className = `ramo ${ramo.color}`;
-    div.textContent = ramo.nombre;
-    div.onclick = () => {
-      infoBox.style.display = 'block';
-      infoBox.innerHTML = `<strong>${ramo.nombre}</strong><br>Prerrequisitos: ${ramo.prerrequisitos || 'Ninguno'}`;
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    };
-    divRamos.appendChild(div);
-  });
+    malla[semestre].forEach(ramo => {
+      const div = document.createElement("div");
+      div.className = "ramo";
+      div.textContent = ramo.nombre;
+      div.onclick = () => manejarClick(ramo, div);
+      columna.appendChild(div);
+    });
 
-  divSem.appendChild(divRamos);
-  contenedor.appendChild(divSem);
+    contenedor.appendChild(columna);
+  }
 }
 
+function manejarClick(ramo, div) {
+  const info = document.getElementById("info");
+
+  if (div.classList.contains("tachado")) {
+    div.classList.remove("tachado");
+    aprobados = aprobados.filter(r => r !== ramo.nombre);
+    info.textContent = `❌ Quitaste "${ramo.nombre}" de tu lista.`;
+    info.style.display = "block";
+    return;
+  }
+
+  const cumple = ramo.prerequisitos.every(req => aprobados.includes(req));
+  if (!cumple && ramo.prerequisitos.length > 0) {
+    info.textContent = `⚠️ No puedes cursar "${ramo.nombre}" aún. Prerrequisitos: ${ramo.prerequisitos.join(", ")}`;
+    info.style.display = "block";
+    return;
+  }
+
+  div.classList.add("tachado");
+  aprobados.push(ramo.nombre);
+  info.textContent = `✅ "${ramo.nombre}" marcado como aprobado.`;
+  info.style.display = "block";
+}
+
+crearMalla();
