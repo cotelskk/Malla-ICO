@@ -1,72 +1,87 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff0f5;
+  font-family: 'Raleway', sans-serif;
+  background-color: #f9f9fc;
+  margin: 0;
+  padding: 20px;
   color: #333;
-  padding: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #2c3e50;
 }
 
-.grid {
+#resetBtn {
+  background-color: #ffcccc;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 2px 2px 5px #ccc;
+}
+
+#resetBtn:hover {
+  background-color: #ff9999;
+}
+
+#malla {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  padding-bottom: 20px;
 }
 
 .semestre {
-  min-width: 220px;
-  background: #ffe4e1;
+  background-color: #ffffff;
+  padding: 10px;
   border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
 }
 
-.semestre h2 {
+.semestre h3 {
   text-align: center;
-  font-size: 16px;
-  background: #ffc0cb;
-  border-radius: 6px;
-  padding: 8px;
   margin-bottom: 10px;
-  color: #6b1e3d;
+  color: #34495e;
+  font-weight: 700;
 }
 
 .ramo {
-  margin: 6px 0;
   padding: 10px;
+  margin: 6px 0;
   border-radius: 6px;
-  background-color: #ffd6e7;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease-in-out;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Estados */
+.ramo.cursado {
+  background-color: #bfbfbf;
+  color: white;
+  text-decoration: line-through;
+}
+
+.ramo.disponible {
+  background-color: #d4f5d3;
+  color: #2e7d32;
+}
+
+.ramo.bloqueado {
+  background-color: #f5f5f5;
+  color: #999;
 }
 
 .ramo:hover {
-  background-color: #ffc4dd;
-  transform: translateY(-1px);
-}
-
-.ramo.tachado {
-  text-decoration: line-through;
-  background-color: #dab6fc;
-  color: #4b007d;
-}
-
-.info {
-  margin-top: 30px;
-  padding: 15px;
-  background: #fff0f5;
-  border-left: 5px solid #e75480;
-  border-radius: 6px;
-  display: none;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  font-size: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transform: scale(1.03);
 }
