@@ -1,0 +1,104 @@
+{
+  "semestres": [
+    {
+      "numero": 1,
+      "ramos": [
+        { "id": "mat1", "nombre": "Matemática I", "prerrequisitos": [] },
+        { "id": "prog", "nombre": "Programación", "prerrequisitos": [] },
+        { "id": "adm1", "nombre": "Fundamentos de Adm y Neg I", "prerrequisitos": [] },
+        { "id": "com1", "nombre": "Taller de Comunicación I", "prerrequisitos": [] },
+        { "id": "eng1", "nombre": "Inglés I", "prerrequisitos": [] }
+      ]
+    },
+    {
+      "numero": 2,
+      "ramos": [
+        { "id": "mat2", "nombre": "Matemática II", "prerrequisitos": ["mat1"] },
+        { "id": "micro1", "nombre": "Microeconomía I", "prerrequisitos": [] },
+        { "id": "cont1", "nombre": "Contabilidad I", "prerrequisitos": [] },
+        { "id": "adm2", "nombre": "Fundamentos de Adm y Neg II", "prerrequisitos": ["adm1"] },
+        { "id": "eng2", "nombre": "Inglés II", "prerrequisitos": ["eng1"] }
+      ]
+    },
+    {
+      "numero": 3,
+      "ramos": [
+        { "id": "mat3", "nombre": "Matemática III", "prerrequisitos": ["mat2"] },
+        { "id": "est1", "nombre": "Estadística I", "prerrequisitos": ["prog", "mat2"] },
+        { "id": "macro1", "nombre": "Macroeconomía I", "prerrequisitos": ["mat1", "micro1"] },
+        { "id": "tec", "nombre": "Tecnología y Empresa", "prerrequisitos": ["prog"] },
+        { "id": "com2", "nombre": "Taller de Comunicación II", "prerrequisitos": ["com1"] },
+        { "id": "eng3", "nombre": "Inglés III", "prerrequisitos": ["eng2"] }
+      ]
+    },
+    {
+      "numero": 4,
+      "ramos": [
+        { "id": "est2", "nombre": "Estadística II", "prerrequisitos": ["est1"] },
+        { "id": "micro2", "nombre": "Microeconomía II", "prerrequisitos": ["mat2", "micro1"] },
+        { "id": "cont2", "nombre": "Contabilidad II", "prerrequisitos": ["cont1", "tec"] },
+        { "id": "personas", "nombre": "Personas y Equipos", "prerrequisitos": ["adm2"] },
+        { "id": "lider", "nombre": "Taller de Liderazgo y Trabajo en Equipo", "prerrequisitos": ["adm2", "com2"] },
+        { "id": "eng4", "nombre": "Inglés IV", "prerrequisitos": ["eng3"] }
+      ]
+    },
+    {
+      "numero": 5,
+      "ramos": [
+        { "id": "econo1", "nombre": "Econometría I", "prerrequisitos": ["mat3", "est2"] },
+        { "id": "macro2", "nombre": "Macroeconomía II", "prerrequisitos": ["mat3", "macro1"] },
+        { "id": "finanzas1", "nombre": "Finanzas I", "prerrequisitos": ["cont2", "est2"] },
+        { "id": "estrategia", "nombre": "Estrategia", "prerrequisitos": ["personas", "tec"] },
+        { "id": "etica", "nombre": "Taller de Ética en la Toma de Decisiones", "prerrequisitos": ["personas", "lider"] },
+        { "id": "eng5", "nombre": "Inglés V", "prerrequisitos": ["eng4"] }
+      ]
+    },
+    {
+      "numero": 6,
+      "ramos": [
+        { "id": "cdatos", "nombre": "Ciencia de Datos", "prerrequisitos": ["econo1", "tec"] },
+        { "id": "global", "nombre": "Globalización y Sustentabilidad", "prerrequisitos": ["est2", "macro2", "estrategia"] },
+        { "id": "marketing", "nombre": "Marketing", "prerrequisitos": ["est2", "estrategia"] },
+        { "id": "op", "nombre": "Gestión de Operaciones", "prerrequisitos": ["est2", "estrategia"] },
+        { "id": "cfg1", "nombre": "CFG I", "prerrequisitos": [] }
+      ]
+    },
+    {
+      "numero": 7,
+      "ramos": [
+        { "id": "mateco", "nombre": "Matemáticas para Economía", "prerrequisitos": ["cdatos"] },
+        { "id": "econo2", "nombre": "Econometría II", "prerrequisitos": ["cdatos"] },
+        { "id": "juego", "nombre": "Teoría de Juegos", "prerrequisitos": ["micro2", "global"] },
+        { "id": "crec", "nombre": "Crecimiento y Desarrollo Económico", "prerrequisitos": ["macro2"] },
+        { "id": "cfg2", "nombre": "CFG II", "prerrequisitos": [] }
+      ]
+    },
+    {
+      "numero": 8,
+      "ramos": [
+        { "id": "cdatoseco", "nombre": "Ciencia de Datos para Economía", "prerrequisitos": ["econo2"] },
+        { "id": "infoeco", "nombre": "Economía de la Información", "prerrequisitos": ["juego"] },
+        { "id": "politica", "nombre": "Política Económica", "prerrequisitos": ["crec"] },
+        { "id": "simul", "nombre": "Taller de Simulación Económica", "prerrequisitos": ["mateco", "macro2"] },
+        { "id": "cfg3", "nombre": "CFG III", "prerrequisitos": [] }
+      ]
+    },
+    {
+      "numero": 9,
+      "ramos": [
+        { "id": "opt1", "nombre": "ICO09OPT_EC1", "prerrequisitos": [] },
+        { "id": "opt2", "nombre": "ICO09OPT_EC2", "prerrequisitos": [] },
+        { "id": "opt3", "nombre": "ICO09OPT_EC3", "prerrequisitos": [] },
+        { "id": "opt4", "nombre": "ICO09OPT_EC4", "prerrequisitos": [] },
+        { "id": "cfg4", "nombre": "CFG IV", "prerrequisitos": [] }
+      ]
+    },
+    {
+      "numero": 10,
+      "ramos": [
+        { "id": "practica", "nombre": "Práctica Profesional Mención Economía", "prerrequisitos": [] },
+        { "id": "portafolio", "nombre": "Desarrollo de Carrera y E-portafolio", "prerrequisitos": [] }
+      ]
+    }
+  ]
+}
