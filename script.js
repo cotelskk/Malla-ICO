@@ -20,8 +20,55 @@ const malla = {
     { nombre: "Tecnología y empresa", prerequisitos: ["Programación"] },
     { nombre: "Taller de comunicación II", prerequisitos: ["Taller de comunicación I"] },
     { nombre: "Inglés III", prerequisitos: ["Inglés II"] }
+  ],
+  "Semestre IV": [
+    { nombre: "Estadística II", prerequisitos: ["Estadística I"] },
+    { nombre: "Microeconomía II", prerequisitos: ["Matemática II", "Microeconomía I"] },
+    { nombre: "Contabilidad II", prerequisitos: ["Contabilidad I", "Tecnología y empresa"] },
+    { nombre: "Personas y equipos", prerequisitos: ["Fundamentos de adm y neg II"] },
+    { nombre: "Taller de lid y trabajo en equi", prerequisitos: ["Fundamentos de adm y neg II", "Taller de comunicación II"] },
+    { nombre: "Inglés IV", prerequisitos: ["Inglés III"] }
+  ],
+  "Semestre V": [
+    { nombre: "Econometría I", prerequisitos: ["Matemática III", "Estadística II"] },
+    { nombre: "Macroeconomía II", prerequisitos: ["Matemática III", "Macroeconomía I"] },
+    { nombre: "Finanzas I", prerequisitos: ["Contabilidad II", "Estadística II"] },
+    { nombre: "Estrategia", prerequisitos: ["Personas y equipos", "Tecnología y empresa"] },
+    { nombre: "Taller de ética en la toma de decisiones", prerequisitos: ["Personas y equipos", "Taller de lid y trabajo en equi"] },
+    { nombre: "Inglés V", prerequisitos: ["Inglés IV"] }
+  ],
+  "Semestre VI": [
+    { nombre: "Ciencia de datos", prerequisitos: ["Econometría I", "Tecnología y empresa"] },
+    { nombre: "Globalización y sustentabilidad", prerequisitos: ["Estadística II", "Macroeconomía II", "Estrategia"] },
+    { nombre: "Marketing", prerequisitos: ["Estadística II", "Estrategia"] },
+    { nombre: "Gestión de operaciones", prerequisitos: ["Estadística II", "Estrategia"] },
+    { nombre: "CFG I", prerequisitos: [] }
+  ],
+  "Semestre VII": [
+    { nombre: "Matemáticas para economía", prerequisitos: ["Ciencia de datos"] },
+    { nombre: "Econometría II", prerequisitos: ["Ciencia de datos"] },
+    { nombre: "Teoría de juego", prerequisitos: ["Microeconomía II", "Globalización y sustentabilidad"] },
+    { nombre: "Crecimiento y desarrollo económico", prerequisitos: ["Macroeconomía II"] },
+    { nombre: "CFG II", prerequisitos: [] }
+  ],
+  "Semestre VIII": [
+    { nombre: "Ciencia de datos para economía", prerequisitos: ["Econometría II"] },
+    { nombre: "Economía de la información y competencia imperfecta", prerequisitos: ["Teoría de juego"] },
+    { nombre: "Política económica", prerequisitos: ["Crecimiento y desarrollo económico"] },
+    { nombre: "Taller de simulación económica", prerequisitos: ["Matemáticas para economía", "Macroeconomía II"] },
+    { nombre: "CFG III", prerequisitos: [] }
+  ],
+  "Semestre IX": [
+    { nombre: "ICO09OPT_EC1", prerequisitos: [] },
+    { nombre: "ICO09OPT_EC2", prerequisitos: [] },
+    { nombre: "ICO09OPT_EC3", prerequisitos: [] },
+    { nombre: "ICO09OPT_EC4", prerequisitos: [] },
+    { nombre: "CFG IV", prerequisitos: [] }
+  ],
+  "Semestre X": [
+    { nombre: "Práctica profesional mención economía", prerequisitos: [] },
+    { nombre: "Desarrollo de carrera y E-portafolio", prerequisitos: [] }
   ]
-  // Puedes continuar agregando más semestres aquí si quieres
 };
 
 let aprobados = [];
