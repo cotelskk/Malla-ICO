@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fefefe;
+  background-color: #fff0f5; /* Fondo rosado claro */
   color: #333;
   padding: 30px;
 }
@@ -19,46 +19,48 @@ h1 {
 
 .semestre {
   min-width: 220px;
-  background: #f0f8ff;
+  background: #ffe4e1; /* Rosado pastel */
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para volumen */
 }
 
 .semestre h2 {
   text-align: center;
   font-size: 16px;
-  background: #dceeff;
+  background: #ffc0cb; /* Rosado más fuerte */
   border-radius: 6px;
   padding: 8px;
   margin-bottom: 10px;
-  color: #004b73;
+  color: #6b1e3d; /* Vino oscuro para contraste */
 }
 
 .ramo {
   margin: 6px 0;
   padding: 10px;
   border-radius: 6px;
-  background-color: #e3f2fd;
+  background-color: #ffd6e7; /* Rosado muy claro */
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Sombra suave */
 }
 
 .ramo:hover {
-  background-color: #d0e7fb;
+  background-color: #ffc4dd;
+  transform: translateY(-1px);
 }
 
 .ramo.tachado {
   text-decoration: line-through;
-  background-color: #c8e6c9;
-  color: #2e7d32;
+  background-color: #dab6fc; /* Morado pastel */
+  color: #4b007d; /* Morado fuerte */
 }
 
 .info {
   margin-top: 30px;
   padding: 15px;
-  background: #fffde7;
-  border-left: 5px solid #fbc02d;
+  background: #fff0f5; /* Fondo informativo rosado claro */
+  border-left: 5px solid #e75480; /* Rosado oscuro */
   border-radius: 6px;
   display: none;
   max-width: 600px;
@@ -66,4 +68,5 @@ h1 {
   margin-right: auto;
   text-align: center;
   font-size: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
